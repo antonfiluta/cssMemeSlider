@@ -13,7 +13,7 @@ main {
     padding: 3vw;
 }
 
-.slider {
+.sliderImg {
     width: 94vw;
     overflow: hidden;
     border-radius: 2vw;
@@ -33,5 +33,44 @@ main {
 }
 
 .bottom {
+    margin-top: 2vw;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sliderText {
+    width: 20vw;
+    overflow: hidden;
+}
+
+#textUl {
+    margin-left: 0;
+    width: 100vw;
+    list-style-type: none;
+    display: flex;
+    gap: 1vw;
+    transition: margin-left 1.2s ease;
+}
+
+.text {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: aliceblue;
+    width: 20vw;
+    font-size: 2vw;
+    margin: 0;
+}
+
+.buttonBox {
+    width: 9vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.button {
+    width: 1vw;
+    height: 1vw;
+    border-radius: 1vw;
+    border: 0.1vw solid white;
+    background-color: white;
 }

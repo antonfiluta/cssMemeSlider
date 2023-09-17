@@ -8,7 +8,7 @@
 </head>
 <body>
     <main>
-      <div class="slider">
+      <div class="sliderImg">
         <ul id="memeUl">
           <li><img src="photo/meme1.jpeg" alt="meme" class="meme"></li>
           <li><img src="photo/meme2.jpeg" alt="meme" class="meme"></li>
@@ -16,8 +16,23 @@
           <li><img src="photo/meme4.jpeg" alt="meme" class="meme"></li>
         </ul> 
       </div>
+
       <div class="bottom">
-        
+        <div class="sliderText">
+            <ul id="textUl">
+              <li class="text">Be ready!</li>
+              <li class="text">Intersting quation</li>
+              <li class="text">Realy living thing</li>
+              <li class="text">Thank you!</li>
+            </ul> 
+        </div>
+
+        <div class="buttonBox">
+          <span class="button" id="b1" onclick="slider(0)" style="background-color: transparent;"></span>
+          <span class="button" id="b2" onclick="slider(1)"></span>
+          <span class="button" id="b3" onclick="slider(2)"></span>
+          <span class="button" id="b4" onclick="slider(3)"></span>
+        </div>
       </div>
     </main>
     <script src="index.js"></script>
