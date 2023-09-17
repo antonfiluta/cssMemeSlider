@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color:darkblue;
+    width: 100vw;
+}
+
+main {
+    padding: 3vw;
+}
+
+.slider {
+    width: 94vw;
+    overflow: hidden;
+    border-radius: 2vw;
+}
+
+#memeUl {
+    width: 94vw;
+    list-style-type: none;
+    display: flex;
+    margin-left: 0;
+    transition: margin-left 1.2s ease;
+}
+
+.meme {
+    width: 94vw;
+    height: 40vw;
+}
+
+.bottom {
+    width: 100%;
+}
