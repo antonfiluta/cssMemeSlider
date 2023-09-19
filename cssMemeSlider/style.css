@@ -70,23 +70,76 @@ main {
     display: flex;
 }
 
-.bWrap {
-    cursor: pointer;
+.circ-wrapper {
     width: 100%;
-    height: 2vw;
+    height: 3vw;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.button {
-    width: 1vw;
-    height: 1vw;
-    border-radius: 1vw;
-    border: 0.1vw solid white;
-    background-color: white;
+.circ {
+    width: 1.5vw;
+    height: 1.5vw;
+    border-radius: 50%;
+    opacity: 0.6;
+    transition: all .4s ease;
 }
 
+.circ-wrapper:hover > .circ,
+.circ:hover {
+  opacity: 0.9;
+  transform: scale(1.1);
+}
+
+.circ {
+    background-color: green;
+  }
+
+#r1:checked ~ .bottom .buttonWrapper .buttonBox .circ-wrapper:nth-of-type(1) > .circ,
+#r2:checked ~ .bottom .buttonWrapper .buttonBox .circ-wrapper:nth-of-type(2) > .circ,
+#r3:checked ~ .bottom .buttonWrapper .buttonBox .circ-wrapper:nth-of-type(3) > .circ,
+#r4:checked ~ .bottom .buttonWrapper .buttonBox .circ-wrapper:nth-of-type(4) > .circ {
+    background-color: coral;
+    opacity: 1;
+}
+
+#r1:checked ~ .sliderImg > #memeUl {
+    margin-left: 0;
+}
+
+#r2:checked ~ .sliderImg > #memeUl {
+    margin-left: -94vw;
+}
+
+#r3:checked ~ .sliderImg > #memeUl {
+    margin-left: calc(-94vw * 2);
+}
+
+#r4:checked ~ .sliderImg > #memeUl {
+    margin-left: calc(-94vw * 3);
+}
+
+
+#r1:checked ~ .bottom .sliderText > #textUl {
+    margin-left: 0;
+}
+
+#r2:checked ~ .bottom .sliderText > #textUl {
+    margin-left: -21vw;
+}
+
+#r3:checked ~ .bottom .sliderText > #textUl {
+    margin-left: calc(-21vw * 2);
+}
+
+#r4:checked ~ .bottom .sliderText > #textUl {
+    margin-left: calc(-21vw * 3);
+}
+input[name="r"] {
+    display: none;
+}
 @media screen and (max-width: 700px) { 
     .name {
         height: 55vw;
@@ -106,13 +159,13 @@ main {
         width: 15vw;
     }
 
-    .bWrap {
+    .circ-wrapper {
         height: 4vw;
     }
 
-    .button {
-        width: 2vw;
-        height: 2vw;
+    .circ {
+        width: 3vw;
+        height: 3vw;
     }
 
     .sliderText {
@@ -122,5 +175,21 @@ main {
     .text {
         width: 25vw;
         font-size: 3vw;
+    }
+
+    #r1:checked ~ .bottom .sliderText > #textUl {
+        margin-left: 0;
+    }
+    
+    #r2:checked ~ .bottom .sliderText > #textUl {
+        margin-left: -26vw;
+    }
+    
+    #r3:checked ~ .bottom .sliderText > #textUl {
+        margin-left: calc(-26vw * 2);
+    }
+    
+    #r4:checked ~ .bottom .sliderText > #textUl {
+        margin-left: calc(-26vw * 3);
     }
 }
